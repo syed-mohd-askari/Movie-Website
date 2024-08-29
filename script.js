@@ -174,7 +174,7 @@ getMovies(API_URL);
 function getMovies(url){
     lastURL = url;
     fetch(url).then(res => res.json()).then(data =>{
-        console.log(data);
+        //console.log(data);
         if(data.results.length!=0){
             showMovies(data.results);
             currentPage = data.page;
@@ -187,17 +187,20 @@ function getMovies(url){
             if (currentPage <= 1){
               prev.classList.add('disabled');
               next.classList.remove('disabled');
-              console.log("if condition checked")
+              if (nextPage>totalPages){
+                next.classList.add('disabled');
+              }
+              //console.log("if condition checked")
             }
             else if (currentPage >= totalPages){
               prev.classList.remove('disabled');
               next.classList.add('disabled');
-              console.log("else if condition checked")
+              //console.log("else if condition checked")
             }
             else{
               prev.classList.remove('disabled');
               next.classList.remove('disabled');
-              console.log("else condition checked")
+              //console.log("else condition checked")
             }
 
             // to automatically shift back window to header section
