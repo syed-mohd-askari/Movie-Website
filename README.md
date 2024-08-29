@@ -9,6 +9,7 @@
 - Added Genres and implemented function to dynamically filter content based upon selected genre
 - Added clear button to unselect all selected genres at once
 - Added pagination to surf through multiple pages fetched from API
+- Page button will get disabled automatically on reaching the end.
 - Added a Know more button which will display all the youtube videos related to that movie in an overlay.
 - Responsive design to display perfectly on different screen sizes.
 
