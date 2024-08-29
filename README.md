@@ -1,4 +1,6 @@
 # Movie-Website
+This is a simple Movie overview website. In this project i have used Javascript to dynamically create HTML elements and then populating content in those elements by querying through data fetched from TMDB API. <br>
+Checkout website here : [Live Demo](https://syed-mohd-askari.github.io/Movie-Website/)
 
 ## Features
 
@@ -15,4 +17,4 @@
 
 <hr/>
 
-Checkout website here : [Live Demo](https://syed-mohd-askari.github.io/Movie-Website/)
+
