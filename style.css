@@ -1,0 +1,452 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+/* These are custom properties (CSS variables) that you can use throughout your CSS file. */
+:root{
+    --primary-color : #22254b;
+    --secondary-color : #373b68;
+}
+
+body{
+    background-color: var(--primary-color);
+    font-family: 'Poppins';
+    margin: 0;
+}
+
+header{
+    position: relative;
+    padding: 1rem;
+    display: flex;
+    justify-content:end;
+    align-items: center;
+    background: url(./img/Banner.png) no-repeat center center;
+    background-size: cover;
+    background-position: right;  
+    background-color: var(--primary-color);
+    background-blend-mode:multiply;
+    
+}
+
+
+.logo{
+    position: absolute;
+    left: 2%;
+    padding: 10px 10px;
+    height: 70px;
+
+}
+
+
+.search{
+    background-color: var(--secondary-color);
+    border: 2px solid var(--primary-color) ;
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    font-size: 1rem;
+    color:#fff;
+    font-family: inherit;
+
+}
+
+.search:focus{
+    outline: 0;
+    background-color: var(--primary-color);
+}
+
+.search::placeholder{
+    color: #7378c5;
+}
+
+main{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.movie{
+    width: 300px;
+    margin: 1rem;
+    /* border: 1px solid #373b68; */
+    border-radius: 3px;
+    box-shadow: 0.2px 4px 5px rgba(0,0,0,0.1);
+    background-color: var(--secondary-color);
+    position: relative;
+    overflow: hidden;
+    
+}
+
+.movie img{
+    width: 100%;
+}
+
+.movie-info{
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:0.5rem 1rem 1rem;
+    letter-spacing: 0.5px;
+}
+
+.movie-info h3{
+    margin: 0;
+}
+
+.movie-info span {
+    background-color: var(--primary-color);
+    padding: 0.25rem 0.5rem;
+    border-radius: 3px;
+    font-weight: bold;
+}
+
+.movie-info span.green{
+    color: lightgreen;
+}
+
+.movie-info span.red{
+    color: red;
+}
+.movie-info span.orange{
+    color: orange;
+}
+
+.overview {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #fff;
+    padding: 1rem;
+    max-height: 100%;
+    transform: translateY(101%);
+    transition:transform 0.3s ease-in;
+}
+
+.movie:hover .overview{
+    transform: translateY(0%);
+}
+
+
+#tags{
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 10px auto;
+}
+
+.tag{
+    color: #fff;
+    padding: 10px 20px;
+    background-color: orange;
+    margin: 5px;
+    border-radius: 50px;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.tag.highlight{
+    background-color: red;
+}
+
+.no-results{
+    color: #fff;
+}
+
+
+.pagination{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    margin:10px 30px;
+    color: #fff;
+    
+}
+
+.page{
+    padding: 20px;
+    cursor: pointer;
+}
+
+.page.disabled{
+    cursor: not-allowed;
+    color: grey;
+}
+
+.current{
+    margin: 10px;
+    border: 5px solid orange;
+    padding: 10px 20px;
+    border-radius: 50%;
+    font-weight: bold;
+    font-size : 1.25 rem;
+}
+
+.know-more{
+    background-color: #ffa500;
+    border-radius: 50px;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+    border:0;
+    padding: 10px 20px;
+    margin-top: 5px;
+    display: block;
+    cursor: pointer;
+}
+
+
+/* The Overlay (background) */
+.overlay {
+    /* Height & width depends on how you want to reveal the overlay (see JS below) */   
+    height: 100%;
+    width: 0;
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    background-color: rgba(0,0,0, 0.9); /* Black w/opacity */
+    overflow-x: hidden; /* Disable horizontal scroll */
+    transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+  }
+  
+/* Position the content inside the overlay */
+.overlay-content {
+    position: relative;
+    top: 10%; 
+    width: 100%; /* 100% width */
+    text-align: center; /* Centered text/links */
+    margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+}
+  
+/* The navigation links inside the overlay */
+.overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block; /* Display block instead of inline */
+    transition: 0.3s; /* Transition effects on hover (color) */
+}
+
+/* When you mouse over the navigation links, change their color */
+.overlay a:hover, .overlay a:focus {
+    color: #f1f1f1;
+}
+
+/* Position the close button (top right corner) */
+.overlay .closebtn {
+    position: absolute;
+    top: 5%;
+    right: 45px;
+    font-size: 60px;
+}
+
+
+
+.embed.hide{
+    display:none;
+}
+
+.embed.show{
+    display:inline-block;
+}
+
+.arrow{
+    position: absolute;
+    font-size: 40px;
+}
+
+.arrow.left-arrow{
+    top:50%;
+    left:5%;
+    transform: translateY(-50%);
+}
+
+.arrow.right-arrow{
+    top:50%;
+    right:5%;
+    transform: translateY(-50%);
+}
+
+.dots{
+    margin-top:30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.dots .dot{
+    color:#fff;
+    margin: 10px;
+    border: 5px solid var(--secondary-color);
+    padding: 15px 20px;
+    border-radius: 50%;
+    font-weight: bold;
+    font-size : 1.25 rem;
+    
+}
+
+.dots .dot.active{
+    border-color: orange;
+}
+
+
+.footer{
+    width: 100%;
+    background-color: #0f0e0e;
+    color: #f1f1f1;
+    padding: 15px;
+    margin: 0px;
+    font-size:0.7rem ;
+}
+
+.container{
+    max-width: 1170px;
+    /* background-color: red; */
+    margin: auto;
+}
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer ul{
+    list-style: none;
+    padding: 0;
+}
+
+.footer-col{
+    width: 25%;
+    padding: 0 15px;
+}
+
+.footer-col h4{
+    font-size: 18px;
+    text-transform: capitalize;
+    margin-bottom: 30px;
+    font-weight: 600;
+    position: relative;
+    color: #f1f1f1dc;
+}
+
+.footer-col h4::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background-color: rgba(255, 166, 0, 0.753);
+    height: 2px;
+    box-sizing: border-box;
+    width: 50px;
+}
+
+.footer-col ul li:not(:last-child){
+    margin-bottom: 10px;
+}
+
+.footer-col ul li a{
+    font-size: 0.9rem;
+    text-transform: capitalize;
+    /* color: #ffffff; */
+    text-decoration: none;
+    font-weight: 400;
+    color: #bbbbbb;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+.footer-col ul li a:hover{
+    color: #ffffff;
+    padding-left: 8px;
+}
+
+.footer-col .social-links a{
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: rgba(255,255,255,0.2);
+    margin-right: 0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: #f1f1f1dc;
+    font-size: 1rem;
+    transition: all 0.5s ease;
+}
+
+.footer-col .social-links a:hover{
+    color: #24262b;
+    background-color: #ffffff;
+}
+
+
+/* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
+@media screen and (max-height: 450px) and (max-width : 767px) {
+    .overlay a {
+        font-size: 20px;
+    }
+    .footer-col{
+        width: 50%;
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width:574px) {
+
+    .footer-col{
+        width: 100%;
+    }
+}
+
+@media (max-width:450px) {
+    .logo{
+        padding: 2px;
+        height: 40px;
+    }
+    .search{
+        font-size: 0.7rem;
+    }
+}
+@media (max-width:420px) {
+    .pagination{
+        flex-direction: column;
+    }
+    .logo{
+        padding: 2px;
+        height: 28px;
+    }
+    .search{
+        font-size: 0.5rem;
+    }
+    .tag{
+        font-size: 0.7rem;
+    }
+    
+}
+
+.footer-line{
+    width: 70%;
+    margin-top: 15px;
+    margin-bottom: 0px;
+    border-color: #ffa500;
+    border-color: #bbbbbba7;
+}
+
+.my-info{
+    margin-top: 7px;
+    display: flex;
+    justify-content: center;
+    /* padding-top:20px; */
+    color: #bbbbbb;
+}
+
+
+
+
