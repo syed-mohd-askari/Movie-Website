@@ -16,6 +16,21 @@ Checkout website here : [Live Demo](https://syed-mohd-askari.github.io/Movie-Web
 - Responsive design to display perfectly on different screen sizes.
 
 <hr/>
-![image](https://github.com/user-attachments/assets/50e55d34-85c9-43c5-872a-833b9ca670b3)
+![image]()
+## Screenshots of the Website
 
+<div align="center">
+  <img src="![image](https://github.com/user-attachments/assets/68a5b0db-d52b-430f-abb8-a2db3e985e69)
+" alt="Screenshot 1" width="600">
+</div>
+
+<div align="center">
+  <img src="https://github.com/syed-mohd-askari/Movie-Website/" alt="Screenshot 2" width="600">
+</div>
+
+<div align="center">
+  <img src="https://github.com/syed-mohd-askari/" alt="Screenshot 3" width="600">
+</div>
+
+<hr/>
 
