@@ -17,21 +17,23 @@ Checkout website here : [Live Demo](https://syed-mohd-askari.github.io/Movie-Web
 
 <hr/>
 
-https://github-production-user-asset-6210df.s3.amazonaws.com/82087982/363076265-68a5b0db-d52b-430f-abb8-a2db3e985e69.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20240830%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240830T071151Z&X-Amz-Expires=300&X-Amz-Signature=a60191b131bc8f482034b1f3dce3529ea5ebb7589b541be6063eee17ee473199&X-Amz-SignedHeaders=host&actor_id=82087982&key_id=0&repo_id=849542859
-
 ## Screenshots of the Website
 
-<div align="center">
-  <img src="https://github.com/syed-mohd-askari/Movie-Website/assets/82087982/363076265-68a5b0db-d52b-430f-abb8-a2db3e985e69.png" alt="Screenshot 1" width="600">
-</div>
+| <center> :arrow_down: Home Page :arrow_down:</center> |
+| :---------------------------------------------:|
+| ![image](https://github.com/user-attachments/assets/5b344000-06e6-407b-b4bb-ed0504d6fb19) <br><br>| 
+| <center><b> :arrow_down: Genre Selection with Clear Button :arrow_down:<b></center> |
+| ![image](https://github.com/user-attachments/assets/20563f7e-c1f1-4591-8606-94bd89162061) <br><br>|
+| <center><b> :arrow_down: Footer Section :arrow_down:<b></center> |
+| ![image](https://github.com/user-attachments/assets/172119ec-e914-43db-a99a-965f30824fdb) <br><br>|
+| <center><b> :arrow_down: Displaying Videos in an Overlay :arrow_down:<b></center> |
+| ![image](https://github.com/user-attachments/assets/8c412eb1-1834-4ab6-9651-52c0280678c7) <br><br>|
+| <center><b> :arrow_down: Deactivating Page buttons on reaching end :arrow_down:<b></center>|
+| ![image](https://github.com/user-attachments/assets/e3e1ae7b-28e8-4b9c-b7ad-9c44bae001b8) <br><br>|
+| <center><b> :arrow_down: Search Button Functionality :arrow_down:<b></center>|
+| ![image](https://github.com/user-attachments/assets/8cbf73f3-0c3c-49ed-9f8c-61a630b6b753) <br><br>|
 
-<div align="center">
-  <img src="https://github.com/syed-mohd-askari/Movie-Website/" alt="Screenshot 2" width="600">
-</div>
 
-<div align="center">
-  <img src="https://github.com/syed-mohd-askari/" alt="Screenshot 3" width="600">
-</div>
 
 <hr/>
 
